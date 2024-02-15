@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="res.css">
+  <link rel="icon" href="logo.png" type="image/png">
+  <title>Shinchan</title>
+</head>
+<body>
+  <div class="background-container">
+    <div class="top-torn-image"></div>
+    <div class="background-content">
+      <!-- Your page content goes here -->
+      <h1>Characters</h1>
+      <p>
+      <img src="line.png" alt="Your Image Description"></p>
+    </div>
+    
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <!-- Repeat this block for each image card -->
+    <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+      <div class="image-container">
+          <img src="shin.png" alt="Shinnosuke Nohara (Shinchan)" onclick="openDesPage()">
+          <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Shinnosuke Nohara</p>
+      </div>
+      <div class="text-container">
+        <p class="title-text">Shinnosuke Nohara</p>
+        <p class="description-text">Shinnosuke, also known as Shinchan, is the main protagonist of the series. He is a mischievous and energetic 5-year-old boy with a wild imagination. He loves to play pranks, is fond of candy and snacks, and has a peculiar way of talking that often gets him into funny situations.</p>
+      </div>
+    </div>
+    
+    <!-- Repeat the above block for each image card -->
+
+    <!-- Repeat this block for the second image card -->
+    <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+      <div class="image-container">
+        <img src="nohara.png" alt="Another Character">
+        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Hiroshi Nohara</p>
+      </div>
+      <div class="text-container">
+        <p class="title-text">Hiroshi Nohara</p>
+        <p class="description-text">
+
+            Hiroshi is Shinchan's caring and hardworking father. He works at the Kasukabe Defense Force and often faces humorous challenges at home, thanks to Shinchan's mischievous nature, adding a comedic touch to the family dynamics.
+            </p>
+      </div>
+    </div>
+    <!-- Repeat the above block for the second image card -->
+
+    <!-- Repeat this block for the third image card -->
+    <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+      <div class="image-container">
+        <img src="shin mom.jpg" alt="Yet Another Character">
+        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Mitsi Nohara</p>
+      </div>
+      <div class="text-container">
+        <p class="title-text">Mitsi Nohara</p>
+        <p class="description-text">
+
+            Mitsi is Shinchan's patient and loving mother. She manages the household chores while dealing with Shinchan's playful mischief. Misae is a caring and dedicated mother, often finding humor in the chaos that comes with raising a spirited son.
+            </p>
+      </div>
+    </div>
+    <!-- Repeat the above block for the third image card -->
+  </div>
+    <div class="footer">
+      <img class="bot-torn-image" src="foot.jpg" alt="Bot Torn Image">
+  </div>
+  </div>
+  <script>
+    function showText(card) {
+      var titleText = card.querySelector('.title-text');
+      var descriptionText = card.querySelector('.description-text');
+
+      titleText.style.display = 'block';
+      descriptionText.style.display = 'block';
+    }
+
+    function hideText(card) {
+      var titleText = card.querySelector('.title-text');
+      var descriptionText = card.querySelector('.description-text');
+
+      titleText.style.display = 'none';
+      descriptionText.style.display = 'none';
+    }
+
+    function redirectToAnotherPage(url) {
+      window.location.href = url;
+    }
+    function openDesPage() {
+            window.location.href = "des.html";
+        }
+  </script>
+</body>
+</html>

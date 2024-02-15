@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px; /* Add padding to give some space around the cards */
+    }
+
+    .image-card {
+      width: 300px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      position: relative;
+      margin: 10px; /* Adjust margin as needed */
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out, z-index 0s linear 0.3s;
+    }
+
+    .text-container {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: black;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .image-card:hover .image-container img {
+      transform: translateY(-10%);
+      z-index: 2;
+    }
+
+    .image-card:hover .text-container {
+      opacity: 1;
+      background-color: white; /* Change background color to white on hover */
+    }
+
+    .image-card .title-text,
+    .image-card .description-text {
+      display: none;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      overflow: hidden;
+      max-height: 45px;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <!-- Repeat this block for each image card -->
+      <div class="col-md-4">
+        <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+          <div class="image-container">
+            <img src="shin.png" alt="Shinnosuke Nohara (Shinchan)">
+            <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Shinnosuke Nohara</p>
+          </div>
+          <div class="text-container">
+            <p class="title-text">Shinnosuke Nohara</p>
+            <p class="description-text">Shinnosuke, also known as Shinchan, is the main protagonist of the series. He is a mischievous and energetic 5-year-old boy with a wild imagination. He loves to play pranks, is fond of candy and snacks, and has a peculiar way of talking that often gets him into funny situations.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above block for each image card -->
+
+      <!-- Repeat this block for the second image card -->
+      <div class="col-md-4">
+        <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+          <div class="image-container">
+            <img src="nohara.png" alt="Hiroshi Nohara">
+            <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Hiroshi Nohara</p>
+          </div>
+          <div class="text-container">
+            <p class="title-text">Hiroshi Nohara</p>
+            <p class="description-text">Hiroshi is Shinchan's caring and hardworking father. He works at the Kasukabe Defense Force and often faces humorous challenges at home, thanks to Shinchan's mischievous nature, adding a comedic touch to the family dynamics.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above block for the second image card -->
+
+      <!-- Repeat this block for the third image card -->
+      <div class="col-md-4">
+        <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+          <div class="image-container">
+            <img src="shin mom.jpg" alt="Mitsi">
+            <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Mitsi</p>
+          </div>
+          <div class="text-container">
+            <p class="title-text">Mitsi</p>
+            <p class="description-text">Mitsi is Shinchan's caring and hardworking mother. She plays a vital role in maintaining the Nohara family's harmony and often deals with the humorous situations caused by Shinchan's antics.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat the above block for the third image card -->
+    </div>
+    <div class="row">
+        <!-- Repeat this block for each image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="sis.jpg" alt="Shinnosuke Nohara (Shinchan)">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Himawari Nohara</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Himawari Nohara</p>
+              <p class="description-text">
+
+                Himawari is Shinchan's adorable younger sister. Despite being a baby, she sometimes displays intelligence beyond her years. She is often amused by her brother's mischievous antics, bringing a cute and entertaining element to the Nohara family dynamics.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for each image card -->
+  
+        <!-- Repeat this block for the second image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="shiro.png" alt="Hiroshi Nohara">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Shiro</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Shiro</p>
+              <p class="description-text">Shiro is a white pup Shinchan found in a cardboard box. While he is a beloved member of the family, he is the subject of neglect thanks to his owner's unintentional oversight, adding a touch of comedic irony to the Nohara household.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for the second image card -->
+  
+        <!-- Repeat this block for the third image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="k.png" alt="Mitsi">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Kazama</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Kazama</p>
+              <p class="description-text">
+                Kazama is one of Shinchan's classmates and friends. He is a smart and studious boy who often finds himself at odds with Shinchan's mischievous behavior, creating a humorous contrast in their friendship.
+                
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for the third image card -->
+      </div>
+      <div class="row">
+        <!-- Repeat this block for each image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="nene.jpeg"Shinnosuke Nohara (Shinchan)">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Nene Sakurada</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Nene Sakurada</p>
+              <p class="description-text">Nene is another one of Shinchan's friends and classmates. She is a kind-hearted and sensitive girl who enjoys spending time with her friends. She often finds herself amused by Shinchan's mischievous antics, contributing to the lively dynamic of their friendship.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for each image card -->
+  
+        <!-- Repeat this block for the second image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="m.png" alt="Hiroshi Nohara">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Masao Sato</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Masao Sato</p>
+              <p class="description-text">
+	
+                Masao is one of Shinchan's close friends and classmates. He is a timid and gentle boy who is easily scared by Shinchan's pranks but remains a loyal friend, adding a touch of innocence to the group's dynamic.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for the second image card -->
+  
+        <!-- Repeat this block for the third image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="b.png" alt="Mitsi">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Bo Suzuki</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Bo Suzuki</p>
+              <p class="description-text"> 
+
+                Bo is a friendly and easygoing boy who is often seen with Masao. He enjoys participating in various activities with his friends and often joins Shinchan in his playful escapades, contributing to the lively atmosphere of their friendship.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for the third image card -->
+      </div>
+      <div class="row">
+        <!-- Repeat this block for each image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="ai.jpg" alt="Shinnosuke Nohara (Shinchan)">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Ai Suotome</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Ai Suotome</p>
+              <p class="description-text"> 
+
+                Ai is a new student who joins Shinchan's class later in the series. She is born in New York and is from an extremely rich family. She is always seen radiating sophistication and adds a touch of glamour to the class dynamic.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for each image card -->
+  
+        <!-- Repeat this block for the second image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="t1.png" alt="Hiroshi Nohara">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Midori Ishizaka</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Midori Ishizaka</p>
+              <p class="description-text"> 
+
+                She is a 24 years old teacher in Sunflower class. Yoshinaga is her maiden name. She is always in bitter rivalry with Ume Matsuzaka and they get into banter that keeps the school staff entertained.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for the second image card -->
+  
+        <!-- Repeat this block for the third image card -->
+        <div class="col-md-4">
+          <div class="image-card" onmouseover="showText(this)" onmouseout="hideText(this)">
+            <div class="image-container">
+              <img src="t2.png" alt="Mitsi">
+              <p style="font-family: Arial, Helvetica, sans-serif; text-align: center; color: black; font-size: 14px;">Ume Matsuzaka</p>
+            </div>
+            <div class="text-container">
+              <p class="title-text">Ume Matsuzaka</p>
+              <p class="description-text">
+
+                Ume is a teacher in Shinchan's school and she is single. She likes to live stylishly in public but she actually struggles to save her money for accessories, providing a humorous contrast to her outward appearance.
+                </p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the above block for the third image card -->
+      </div>
+  </div>
+
+  <script>
+    function showText(card) {
+      var titleText = card.querySelector('.title-text');
+      var descriptionText = card.querySelector('.description-text');
+
+      titleText.style.display = 'block';
+      descriptionText.style.display = 'block';
+    }
+
+    function hideText(card) {
+      var titleText = card.querySelector('.title-text');
+      var descriptionText = card.querySelector('.description-text');
+
+      titleText.style.display = 'none';
+      descriptionText.style.display = 'none';
+    }
+
+    function redirectToAnotherPage(url) {
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>

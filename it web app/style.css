@@ -1,0 +1,65 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px; /* Add padding to give some space around the cards */
+    }
+
+    .image-card {
+      width: 300px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      position: relative;
+      margin: 10px; /* Adjust margin as needed */
+    }
+
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out, z-index 0s linear 0.3s;
+    }
+
+    .text-container {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: black;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .image-card:hover .image-container img {
+      transform: translateY(-10%);
+      z-index: 2;
+    }
+
+    .image-card:hover .text-container {
+      opacity: 1;
+      background-color: white; /* Change background color to white on hover */
+    }
+
+    .image-card .title-text,
+    .image-card .description-text {
+      display: none;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      overflow: hidden;
+      max-height: 45px;
+      text-overflow: ellipsis;
+    }

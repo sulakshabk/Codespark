@@ -1,0 +1,197 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  img {
+    order: -1; 
+  }
+  .background-container {
+    position: relative;
+    background-image: url('background.png');
+    background-repeat: repeat;
+    height: 100%;
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+  
+  .top-torn-image {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust the height of the torn effect */
+    background-image: url('intro.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+  
+  .bot-torn-image {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%; /* Adjust the height of the torn effect */
+    background-image: url('foot.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+  
+  .background-content {
+    padding: 5% 0; /* Adjust padding to accommodate torn effects as a percentage of the viewport height */
+ color: rgb(46, 47, 48);
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+  }
+  
+  h1, p {
+    /* Example styles for your content */
+    text-align: center;
+    margin: 10px;
+    position: relative;
+  }
+  .footer {
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    background-color: #f1f1f1;
+}
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .top-torn-image {
+      height: 20vh; /* Adjust for smaller screens */
+    }
+    .bot-torn-image {
+      height: 20vh; /* Adjust for smaller screens */
+    }
+  
+    .background-content {
+      padding: 10% 0; /* Adjust padding for smaller screens */
+    }
+  }
+  .image-card {
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    margin: 80px; /* Adjust margin as needed */
+  }
+  .image-card + .image-card {
+    margin-left: 10px; /* Adjust the space between cards */
+}
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out, z-index 0s linear 0.5s;
+  }
+
+  .text-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    align-items: center;
+  }
+
+  .image-card:hover .image-container img {
+    transform: translateY(-10%);
+    z-index: 2;
+  }
+
+  .image-card:hover .text-container {
+    opacity: 1;
+    background-color: white; /* Change background color to white on hover */
+  }
+
+  .image-card .title-text,
+  .image-card .description-text {
+    display: none;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    max-height: 45px;
+    text-overflow: ellipsis;
+  }
+  header {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.character-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.character-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 200px;
+
+}
+
+.character-info p {
+    font-size: 1rem;
+}
+
+section {
+    margin-bottom: 200px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 50px;
+}
+
+/* Your existing CSS styles here */
+.info-item:hover .info-value {
+    opacity: 1;
+}
+  
